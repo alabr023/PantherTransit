@@ -2,4 +2,4 @@
 .DS_Store
 
 # Ignore GoogleService-Info.plist
-PantherTransit/GoogleService-Info.plist
+ParkSmart/GoogleService-Info.plist
