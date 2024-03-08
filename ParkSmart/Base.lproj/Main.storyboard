@@ -23,15 +23,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bc-Sc-HVV">
-                                <rect key="frame" x="54" y="367" width="304" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYj-Hr-XC6">
+                                <rect key="frame" x="44" y="213" width="304" height="30"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Spaces Available" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajG-DL-HcO">
-                                <rect key="frame" x="44" y="259" width="304" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bc-Sc-HVV">
+                                <rect key="frame" x="44" y="293" width="304" height="30"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -41,22 +41,21 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
+                            <constraint firstItem="1bc-Sc-HVV" firstAttribute="top" secondItem="SYj-Hr-XC6" secondAttribute="bottom" constant="50" id="3kO-pz-mVG"/>
                             <constraint firstItem="y1f-tt-02V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="78" id="BQE-W7-kSZ"/>
                             <constraint firstItem="y1f-tt-02V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="73" id="CH2-Lv-eDR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ajG-DL-HcO" secondAttribute="trailing" constant="45" id="OpE-bL-RuP"/>
-                            <constraint firstItem="ajG-DL-HcO" firstAttribute="top" secondItem="y1f-tt-02V" secondAttribute="bottom" constant="121" id="Qe2-6H-Poh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1bc-Sc-HVV" secondAttribute="trailing" constant="35" id="QlF-7a-DOX"/>
-                            <constraint firstItem="1bc-Sc-HVV" firstAttribute="top" secondItem="ajG-DL-HcO" secondAttribute="bottom" constant="78" id="UlK-xO-b5A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1bc-Sc-HVV" secondAttribute="trailing" constant="45" id="Zgg-cD-5Rr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SYj-Hr-XC6" secondAttribute="trailing" constant="45" id="bIw-ea-TRF"/>
+                            <constraint firstItem="1bc-Sc-HVV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="d3I-Yz-PMH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y1f-tt-02V" secondAttribute="trailing" constant="73" id="fvF-Dc-3Wu"/>
-                            <constraint firstItem="ajG-DL-HcO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="lbR-Uv-DLl"/>
-                            <constraint firstItem="1bc-Sc-HVV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="wzp-mD-Jq6"/>
-                            <constraint firstItem="1bc-Sc-HVV" firstAttribute="top" secondItem="y1f-tt-02V" secondAttribute="bottom" constant="97" id="zLm-xq-tlQ"/>
+                            <constraint firstItem="SYj-Hr-XC6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="mhZ-bN-xiL"/>
+                            <constraint firstItem="SYj-Hr-XC6" firstAttribute="top" secondItem="y1f-tt-02V" secondAttribute="bottom" constant="75" id="syt-za-FYY"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Parking" image="car.2" catalog="system" id="VUJ-kZ-jod"/>
                     <connections>
                         <outlet property="parkingLabel" destination="1bc-Sc-HVV" id="pza-aK-272"/>
-                        <outlet property="totalCounter" destination="ajG-DL-HcO" id="lig-2j-MPX"/>
+                        <outlet property="totalCounter" destination="SYj-Hr-XC6" id="OAQ-iC-XfD"/>
                         <segue destination="a9I-MV-kFm" kind="presentation" id="hlP-Dj-cU8"/>
                     </connections>
                 </viewController>

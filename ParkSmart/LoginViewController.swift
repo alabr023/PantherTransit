@@ -1,6 +1,9 @@
 //
+//  TODO: Refactor to SearchViewController
 //  LoginViewController.swift
-//  PantherTransit
+//  ParkSmart
+//
+//  Initial search page for users to locate their specific lot
 //
 //  Created by Andy on 3/5/24.
 //
