@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fC9-S7-Duz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fC9-S7-Duz">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -12,7 +12,7 @@
         <!--Parking-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ParkingViewController" customModule="PantherTransit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ParkingViewController" customModule="ParkSmart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,7 +24,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bc-Sc-HVV">
-                                <rect key="frame" x="54" y="235" width="304" height="30"/>
+                                <rect key="frame" x="54" y="367" width="304" height="30"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Spaces Available" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajG-DL-HcO">
+                                <rect key="frame" x="44" y="259" width="304" height="30"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -36,8 +43,12 @@
                         <constraints>
                             <constraint firstItem="y1f-tt-02V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="78" id="BQE-W7-kSZ"/>
                             <constraint firstItem="y1f-tt-02V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="73" id="CH2-Lv-eDR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ajG-DL-HcO" secondAttribute="trailing" constant="45" id="OpE-bL-RuP"/>
+                            <constraint firstItem="ajG-DL-HcO" firstAttribute="top" secondItem="y1f-tt-02V" secondAttribute="bottom" constant="121" id="Qe2-6H-Poh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1bc-Sc-HVV" secondAttribute="trailing" constant="35" id="QlF-7a-DOX"/>
+                            <constraint firstItem="1bc-Sc-HVV" firstAttribute="top" secondItem="ajG-DL-HcO" secondAttribute="bottom" constant="78" id="UlK-xO-b5A"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y1f-tt-02V" secondAttribute="trailing" constant="73" id="fvF-Dc-3Wu"/>
+                            <constraint firstItem="ajG-DL-HcO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="lbR-Uv-DLl"/>
                             <constraint firstItem="1bc-Sc-HVV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="wzp-mD-Jq6"/>
                             <constraint firstItem="1bc-Sc-HVV" firstAttribute="top" secondItem="y1f-tt-02V" secondAttribute="bottom" constant="97" id="zLm-xq-tlQ"/>
                         </constraints>
@@ -45,6 +56,8 @@
                     <tabBarItem key="tabBarItem" title="Parking" image="car.2" catalog="system" id="VUJ-kZ-jod"/>
                     <connections>
                         <outlet property="parkingLabel" destination="1bc-Sc-HVV" id="pza-aK-272"/>
+                        <outlet property="totalCounter" destination="ajG-DL-HcO" id="lig-2j-MPX"/>
+                        <segue destination="a9I-MV-kFm" kind="presentation" id="hlP-Dj-cU8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -54,11 +67,17 @@
         <!--Login View Controller-->
         <scene sceneID="uFM-Y2-2qY">
             <objects>
-                <viewController id="fC9-S7-Duz" customClass="LoginViewController" customModule="PantherTransit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fC9-S7-Duz" customClass="LoginViewController" customModule="ParkSmart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="blb-Y1-wOk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Park Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XBe-KW-Qwh">
+                                <rect key="frame" x="106" y="189" width="180" height="45.666666666666657"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2T-nM-4EF">
                                 <rect key="frame" x="93.666666666666686" y="389" width="206" height="74"/>
                                 <constraints>
@@ -81,17 +100,24 @@
                         <viewLayoutGuide key="safeArea" id="xdc-VT-xh4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="B2T-nM-4EF" firstAttribute="top" secondItem="XBe-KW-Qwh" secondAttribute="bottom" constant="154.33000000000001" id="CRb-9d-Ew3"/>
+                            <constraint firstItem="xdc-VT-xh4" firstAttribute="trailing" secondItem="B2T-nM-4EF" secondAttribute="trailing" constant="93.329999999999998" id="Qhp-Ap-eDr"/>
+                            <constraint firstItem="xdc-VT-xh4" firstAttribute="bottom" secondItem="B2T-nM-4EF" secondAttribute="bottom" constant="355" id="dWQ-AN-C2r"/>
                             <constraint firstItem="B2T-nM-4EF" firstAttribute="centerX" secondItem="blb-Y1-wOk" secondAttribute="centerX" id="hwx-Uw-h2K"/>
+                            <constraint firstItem="B2T-nM-4EF" firstAttribute="leading" secondItem="xdc-VT-xh4" secondAttribute="leading" constant="93.670000000000002" id="ikn-Hm-Qp3"/>
                             <constraint firstItem="B2T-nM-4EF" firstAttribute="centerY" secondItem="blb-Y1-wOk" secondAttribute="centerY" id="jIW-bT-awh"/>
+                            <constraint firstItem="xdc-VT-xh4" firstAttribute="trailing" secondItem="XBe-KW-Qwh" secondAttribute="trailing" constant="107" id="mYh-Hj-qYy"/>
+                            <constraint firstItem="XBe-KW-Qwh" firstAttribute="leading" secondItem="xdc-VT-xh4" secondAttribute="leading" constant="106" id="pwr-Id-Mse"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="parkCode" destination="XBe-KW-Qwh" id="GVY-M5-sAt"/>
                         <segue destination="jkx-Yo-wf7" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="4yc-zP-yaE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mto-qM-aTD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1066.4122137404579" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="-1066.8224299065421" y="3.2397408207343417"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xoc-5V-TnN">
@@ -117,7 +143,7 @@
         <!--Contact-->
         <scene sceneID="zvi-1a-vlJ">
             <objects>
-                <viewController title="Contact" id="SUp-FE-vJH" customClass="DatabaseViewController" customModule="PantherTransit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Contact" id="SUp-FE-vJH" customClass="ContactsViewController" customModule="ParkSmart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rf2-uK-nSW">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,6 +151,9 @@
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Contact" image="person.circle" catalog="system" id="VtF-J3-bVk"/>
+                    <connections>
+                        <segue destination="kho-Jz-qtc" kind="presentation" id="OWE-1W-22r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b78-ch-trc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -133,7 +162,7 @@
         <!--Settings-->
         <scene sceneID="trM-az-7iF">
             <objects>
-                <viewController id="Qz9-lP-mHf" customClass="DatabaseViewController" customModule="PantherTransit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Qz9-lP-mHf" customClass="SettingsViewController" customModule="ParkSmart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KFM-t7-wG9">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,10 +170,58 @@
                         <color key="backgroundColor" systemColor="systemRedColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" id="t9Y-6A-Hvm"/>
+                    <connections>
+                        <segue destination="78N-h7-pCi" kind="presentation" id="sPj-gR-wuF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w1P-1z-4Wq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="756" y="744"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Dav-cU-vjC">
+            <objects>
+                <viewController id="a9I-MV-kFm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Cs-ra-9Ax">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="hoJ-Az-1hT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KO6-5v-9YW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-793" y="1463"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ACN-VP-BAB">
+            <objects>
+                <viewController id="kho-Jz-qtc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="exb-eW-w7b">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0LH-U9-xrf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kgl-93-R8Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-22" y="1463"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="UFQ-4g-3At">
+            <objects>
+                <viewController id="78N-h7-pCi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u2O-ln-Qe5">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="CgA-9j-yTW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wkP-Mj-Ya5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="755" y="1463"/>
         </scene>
     </scenes>
     <resources>
