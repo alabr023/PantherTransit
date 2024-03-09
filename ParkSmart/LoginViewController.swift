@@ -12,24 +12,43 @@ import UIKit
 
 class LoginViewController : UIViewController {
     @IBOutlet weak var parkCode: UITextField!
+    var recentCodes: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func onLoginButton(_ sender: Any) {
-        print("Login Button Pressed")
-        
+        print("Search Button Pressed")
         guard let code = parkCode.text else {
             return
         }
         
-        // Store the text value in UserDefaults
-        UserDefaults.standard.set(code, forKey: "parkCodeValue")
-        
-        // Optionally, you can synchronize UserDefaults to ensure data is saved immediately
-        UserDefaults.standard.synchronize()
+        getParkCode(code)
         self.performSegue(withIdentifier: "login", sender: self)
+    }
+    
+    // TODO: Create settings option to toggle recent searches for user preference
+    // Function to save a new searched code and manage recent codes
+    func getParkCode(_ code: String) {
+        if let savedCodes = UserDefaults.standard.stringArray(forKey: "parkCodes") {
+            recentCodes = savedCodes
+        }
+        
+        // Remove the code if it exists already
+        if let index = recentCodes.firstIndex(of: code) {
+            recentCodes.remove(at: index)
+        }
+        
+        recentCodes.insert(code, at: 0)
+        if recentCodes.count > 5 {
+            recentCodes.removeLast()
+        }
+        
+        UserDefaults.standard.setValue(recentCodes, forKey: "parkCodes")
+        
+        // Synchronize UserDefaults to ensure data is saved immediately
+        UserDefaults.standard.synchronize()
     }
     
 }

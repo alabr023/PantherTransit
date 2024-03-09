@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		A149D5322B993FCB0076F162 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A149D5312B993FCB0076F162 /* AppDelegate.swift */; };
 		A149D5342B993FCB0076F162 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A149D5332B993FCB0076F162 /* SceneDelegate.swift */; };
-		A149D5362B993FCB0076F162 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A149D5352B993FCB0076F162 /* ViewController.swift */; };
 		A149D5392B993FCB0076F162 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A149D5382B993FCB0076F162 /* Base */; };
 		A149D53B2B993FCC0076F162 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A149D53A2B993FCC0076F162 /* Assets.xcassets */; };
 		A149D53E2B993FCC0076F162 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A149D53D2B993FCC0076F162 /* Base */; };
@@ -25,7 +24,6 @@
 		A149D52E2B993FCB0076F162 /* ParkSmart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkSmart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A149D5312B993FCB0076F162 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A149D5332B993FCB0076F162 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A149D5352B993FCB0076F162 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A149D5382B993FCB0076F162 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A149D53A2B993FCC0076F162 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A149D53D2B993FCC0076F162 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -73,7 +71,6 @@
 				A149D5492B99417C0076F162 /* ParkingViewController.swift */,
 				A149D5312B993FCB0076F162 /* AppDelegate.swift */,
 				A149D5332B993FCB0076F162 /* SceneDelegate.swift */,
-				A149D5352B993FCB0076F162 /* ViewController.swift */,
 				A149D5372B993FCB0076F162 /* Main.storyboard */,
 				A149D53A2B993FCC0076F162 /* Assets.xcassets */,
 				A149D53C2B993FCC0076F162 /* LaunchScreen.storyboard */,
@@ -164,7 +161,6 @@
 			files = (
 				A149D54A2B99417C0076F162 /* LoginViewController.swift in Sources */,
 				A149D5512B9B8D330076F162 /* ContactsViewController.swift in Sources */,
-				A149D5362B993FCB0076F162 /* ViewController.swift in Sources */,
 				A149D5322B993FCB0076F162 /* AppDelegate.swift in Sources */,
 				A149D5342B993FCB0076F162 /* SceneDelegate.swift in Sources */,
 				A149D54D2B99417C0076F162 /* ParkingViewController.swift in Sources */,

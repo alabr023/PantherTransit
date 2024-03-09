@@ -17,7 +17,8 @@ class ParkingViewController: UIViewController {
     
     var databaseReference: DatabaseReference!
     var timer: Timer?
-    var savedParkCode: Int!
+    var currentParkCode: Int = 0
+    var parkingCodes: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +26,11 @@ class ParkingViewController: UIViewController {
         // Get reference to Firebase Database
         databaseReference = Database.database().reference()
         
-        // Get park code from login to determine which lot
-        savedParkCode = UserDefaults.standard.integer(forKey: "parkCodeValue")
-        print("Parking code is \(savedParkCode!)")
+        // Get park code from login to determine which lot data to access
+        parkingCodes = UserDefaults.standard.stringArray(forKey: "parkCodes") ?? ["-1"]
+        currentParkCode = Int(parkingCodes.first!) ?? -1
+        print("Recent parking codes: \(parkingCodes)")
+        print("Current code: \(currentParkCode)")
         
         // TODO: Change reading interval to when page is opened or user pulls for refresh or after a set time interval
         // Start a timer to read the value every second
@@ -37,11 +40,11 @@ class ParkingViewController: UIViewController {
     }
     
     func readParkingSpotValue() {
-        var parkState: String?
-        var totalSpots: Int?
-        var openSpots: Int?
+        var parkState: String = ""
+        var totalSpots: Int = 0
+        var openSpots: Int = 0
         
-        let lotReference = databaseReference.child("Parking_lot_\(savedParkCode!)_test")
+        let lotReference = databaseReference.child("Parking_lot_\(currentParkCode)_test")
         
         // TODO: Wrap parking data as a TableView
         // Read data from "Parking_lot_{given park code}_test"
@@ -61,16 +64,16 @@ class ParkingViewController: UIViewController {
                 
                 // Extracting key (spot) and value (status) pair
                 if let spot = spotSnapshot.key as? String, let status = spotSnapshot.value as? Int {
-                    totalSpots! += 1
-                    openSpots! += status != 0 ? 1 : 0
+                    totalSpots += 1
+                    openSpots += status != 0 ? 1 : 0
                     parkState = status != 0 ? "Open": "Taken"
                     
-                    print("Spot: \(spot), Status: \(parkState!)")
+                    print("Spot: \(spot), Status: \(parkState)")
                     
-                    self.parkingLabel.text! += "Parking_lot_\(self.savedParkCode!)_test\n\t\(spot):\n\t\t\(parkState!)\n"
+                    self.parkingLabel.text! += "Parking_lot_\(self.currentParkCode)_test\n\t\(spot):\n\t\t\(parkState)\n"
                 }
             }
-            self.totalCounter.text = "Total Spaces Available\n\(openSpots!)/\(totalSpots!)"
+            self.totalCounter.text = "Total Spaces Available\n\(openSpots)/\(totalSpots)"
         }
     }
     
