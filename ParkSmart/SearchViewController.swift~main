@@ -10,7 +10,7 @@
 
 import UIKit
 
-class LoginViewController : UIViewController {
+class SearchViewController : UIViewController {
     @IBOutlet weak var parkCode: UITextField!
     var recentCodes: [String] = []
     
