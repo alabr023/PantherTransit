@@ -18,6 +18,7 @@
 		A149D54F2B9941970076F162 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = A149D54E2B9941970076F162 /* FirebaseDatabase */; };
 		A149D5512B9B8D330076F162 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A149D5502B9B8D330076F162 /* ContactsViewController.swift */; };
 		A149D5532B9B8D3C0076F162 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A149D5522B9B8D3C0076F162 /* SettingsViewController.swift */; };
+		A1C4CA7B2B9EB248008036FF /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C4CA7A2B9EB248008036FF /* ActivityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		A149D5492B99417C0076F162 /* ParkingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingViewController.swift; sourceTree = "<group>"; };
 		A149D5502B9B8D330076F162 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		A149D5522B9B8D3C0076F162 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A1C4CA7A2B9EB248008036FF /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				A149D5312B993FCB0076F162 /* AppDelegate.swift */,
 				A149D5332B993FCB0076F162 /* SceneDelegate.swift */,
 				A149D5372B993FCB0076F162 /* Main.storyboard */,
+				A1C4CA7A2B9EB248008036FF /* ActivityViewController.swift */,
 				A149D53A2B993FCC0076F162 /* Assets.xcassets */,
 				A149D53C2B993FCC0076F162 /* LaunchScreen.storyboard */,
 				A149D53F2B993FCC0076F162 /* Info.plist */,
@@ -163,6 +166,7 @@
 				A149D5512B9B8D330076F162 /* ContactsViewController.swift in Sources */,
 				A149D5322B993FCB0076F162 /* AppDelegate.swift in Sources */,
 				A149D5342B993FCB0076F162 /* SceneDelegate.swift in Sources */,
+				A1C4CA7B2B9EB248008036FF /* ActivityViewController.swift in Sources */,
 				A149D54D2B99417C0076F162 /* ParkingViewController.swift in Sources */,
 				A149D5532B9B8D3C0076F162 /* SettingsViewController.swift in Sources */,
 			);

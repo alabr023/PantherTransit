@@ -17,26 +17,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYj-Hr-XC6">
-                                <rect key="frame" x="44" y="160" width="304" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=" " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYj-Hr-XC6">
+                                <rect key="frame" x="44" y="230" width="304" height="30"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bc-Sc-HVV">
-                                <rect key="frame" x="44" y="240" width="304" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=" " lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bc-Sc-HVV">
+                                <rect key="frame" x="44" y="310" width="304" height="30"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parking Availability" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1f-tt-02V">
-                                <rect key="frame" x="22" y="88" width="349" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Parking Availability" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1f-tt-02V">
+                                <rect key="frame" x="22" y="158" width="349" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" red="0.020674405619999999" green="0.038726031780000003" blue="0.18810555339999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nm9-6b-Uu1">
+                                <rect key="frame" x="120" y="83" width="140" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.8156862855" green="0.90588235859999999" blue="0.99215686319999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Search Again">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.020674405619999999" green="0.038726031780000003" blue="0.18810555339999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="strokeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onLoginButton:" destination="fC9-S7-Duz" eventType="touchUpInside" id="RFT-fi-f8E"/>
+                                    <action selector="searchAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W7E-Q6-tDd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.95702964069999996" green="0.96466904880000004" blue="0.98923045399999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -58,11 +75,12 @@
                         <outlet property="parkingLabel" destination="1bc-Sc-HVV" id="pza-aK-272"/>
                         <outlet property="totalCounter" destination="SYj-Hr-XC6" id="OAQ-iC-XfD"/>
                         <segue destination="a9I-MV-kFm" kind="presentation" modalPresentationStyle="fullScreen" id="hlP-Dj-cU8"/>
+                        <segue destination="fC9-S7-Duz" kind="presentation" identifier="searchAgain" modalPresentationStyle="fullScreen" id="scJ-iy-QKS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-793.12977099236639" y="743.66197183098598"/>
+            <point key="canvasLocation" x="-2021" y="744"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="uFM-Y2-2qY">
@@ -73,12 +91,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2T-nM-4EF">
-                                <rect key="frame" x="118" y="609" width="168" height="50"/>
+                                <rect key="frame" x="118" y="550" width="168" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="168" id="Lcx-B0-Wl5"/>
                                     <constraint firstAttribute="height" constant="50" id="wW6-Zs-gmV"/>
                                 </constraints>
-                                <color key="tintColor" red="0.95702964069999996" green="0.96466904880000004" blue="0.98923045399999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.8156862855" green="0.90588235859999999" blue="0.99215686319999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Search">
                                     <backgroundConfiguration key="background">
@@ -92,7 +110,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Park Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XBe-KW-Qwh">
-                                <rect key="frame" x="47" y="534" width="310" height="46"/>
+                                <rect key="frame" x="47" y="475" width="310" height="46"/>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="mNP-jM-186"/>
@@ -101,14 +119,14 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Z6c-M3-nn6">
-                                <rect key="frame" x="41" y="134" width="322" height="296"/>
+                                <rect key="frame" x="41" y="75" width="322" height="296"/>
                                 <color key="backgroundColor" red="0.95702964069999996" green="0.96466904880000004" blue="0.98923045399999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="296" id="OwM-j6-8ap"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready to ParkSmart?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bjk-Kv-4NE">
-                                <rect key="frame" x="75" y="366" width="243" height="49"/>
+                                <rect key="frame" x="75" y="307" width="243" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="K3A-Xn-fi9"/>
                                 </constraints>
@@ -159,6 +177,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="wDh-Fe-oTo"/>
+                        <segue destination="dnU-Qb-ges" kind="relationship" relationship="viewControllers" id="VWR-de-4mH"/>
                         <segue destination="SUp-FE-vJH" kind="relationship" relationship="viewControllers" id="rXe-zl-DzP"/>
                         <segue destination="Qz9-lP-mHf" kind="relationship" relationship="viewControllers" id="9az-06-QzP"/>
                     </connections>
@@ -255,7 +274,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b78-ch-trc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-22.137404580152669" y="743.66197183098598"/>
+            <point key="canvasLocation" x="815" y="744"/>
         </scene>
         <!--Settings-->
         <scene sceneID="trM-az-7iF">
@@ -297,7 +316,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w1P-1z-4Wq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="754.96183206106866" y="743.66197183098598"/>
+            <point key="canvasLocation" x="1592" y="744"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Dav-cU-vjC">
@@ -327,7 +346,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgl-93-R8Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-22" y="1463"/>
+            <point key="canvasLocation" x="815" y="1463"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="UFQ-4g-3At">
@@ -342,13 +361,39 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wkP-Mj-Ya5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="755" y="1463"/>
+            <point key="canvasLocation" x="1592" y="1463"/>
+        </scene>
+        <!--Activity-->
+        <scene sceneID="onl-t3-H0S">
+            <objects>
+                <viewController title="Activity" id="dnU-Qb-ges" customClass="ActivityViewController" customModule="ParkSmart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zyp-N7-dtI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Parking Activity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJW-hi-cT9">
+                                <rect key="frame" x="22" y="92" width="349" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="0.020674405619999999" green="0.038726031780000003" blue="0.18810555339999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IbC-an-Cic"/>
+                        <color key="backgroundColor" red="0.95702964069999996" green="0.96466904880000004" blue="0.98923045399999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Activity" image="doc.on.clipboard" catalog="system" id="lZx-e4-fRn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eDP-bx-rLi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-22" y="744"/>
         </scene>
     </scenes>
     <resources>
         <image name="Logo" width="166.66667175292969" height="166.66667175292969"/>
         <image name="TeamPhoto" width="591.33331298828125" height="336"/>
         <image name="car.2" catalog="system" width="128" height="73"/>
+        <image name="doc.on.clipboard" catalog="system" width="116" height="128"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
         <namedColor name="AccentColor">

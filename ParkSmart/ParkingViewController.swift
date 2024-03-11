@@ -10,7 +10,6 @@
 import UIKit
 import FirebaseDatabase
 
-
 class ParkingViewController: UIViewController {
     @IBOutlet weak var parkingLabel: UILabel!
     @IBOutlet weak var totalCounter: UILabel!
@@ -39,6 +38,13 @@ class ParkingViewController: UIViewController {
         }
     }
     
+    @IBAction func searchAgain(_ sender: Any) {
+        
+        Database.database().reference().removeAllObservers()
+        timer?.invalidate()
+        self.performSegue(withIdentifier: "searchAgain", sender: self)
+    }
+
     func readParkingSpotValue() {
         var parkState: String = ""
         var totalSpots: Int = 0
