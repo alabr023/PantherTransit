@@ -64,17 +64,18 @@
             </objects>
             <point key="canvasLocation" x="-793.12977099236639" y="743.66197183098598"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="uFM-Y2-2qY">
             <objects>
-                <viewController id="fC9-S7-Duz" customClass="LoginViewController" customModule="ParkSmart" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fC9-S7-Duz" customClass="SearchViewController" customModule="ParkSmart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="blb-Y1-wOk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2T-nM-4EF">
-                                <rect key="frame" x="118" y="609" width="169" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2T-nM-4EF">
+                                <rect key="frame" x="118" y="609" width="168" height="50"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="168" id="Lcx-B0-Wl5"/>
                                     <constraint firstAttribute="height" constant="50" id="wW6-Zs-gmV"/>
                                 </constraints>
                                 <color key="tintColor" red="0.95702964069999996" green="0.96466904880000004" blue="0.98923045399999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -106,8 +107,8 @@
                                     <constraint firstAttribute="height" constant="296" id="OwM-j6-8ap"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ready to ParkSmart?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bjk-Kv-4NE">
-                                <rect key="frame" x="75" y="366" width="242" height="49"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready to ParkSmart?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bjk-Kv-4NE">
+                                <rect key="frame" x="75" y="366" width="243" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="K3A-Xn-fi9"/>
                                 </constraints>
@@ -121,14 +122,14 @@
                         <constraints>
                             <constraint firstItem="Bjk-Kv-4NE" firstAttribute="leading" secondItem="xdc-VT-xh4" secondAttribute="leading" constant="75" id="1ys-yL-FPR"/>
                             <constraint firstItem="Z6c-M3-nn6" firstAttribute="leading" secondItem="xdc-VT-xh4" secondAttribute="leading" constant="41" id="6DF-Li-XcZ"/>
-                            <constraint firstItem="B2T-nM-4EF" firstAttribute="leading" secondItem="xdc-VT-xh4" secondAttribute="leading" constant="118" id="6pW-EP-hW0"/>
+                            <constraint firstItem="B2T-nM-4EF" firstAttribute="centerX" secondItem="blb-Y1-wOk" secondAttribute="centerX" id="8bp-Ie-jf9"/>
+                            <constraint firstItem="B2T-nM-4EF" firstAttribute="top" secondItem="XBe-KW-Qwh" secondAttribute="bottom" constant="29" id="Gyq-3F-Au0"/>
                             <constraint firstItem="XBe-KW-Qwh" firstAttribute="centerX" secondItem="B2T-nM-4EF" secondAttribute="centerX" id="JGo-gJ-mKK"/>
                             <constraint firstItem="Bjk-Kv-4NE" firstAttribute="top" secondItem="xdc-VT-xh4" secondAttribute="top" constant="307" id="MPF-AL-sYf"/>
+                            <constraint firstItem="XBe-KW-Qwh" firstAttribute="top" secondItem="Bjk-Kv-4NE" secondAttribute="bottom" constant="119" id="QGF-LL-668"/>
                             <constraint firstItem="Bjk-Kv-4NE" firstAttribute="centerX" secondItem="blb-Y1-wOk" secondAttribute="centerX" id="exk-db-cFb"/>
-                            <constraint firstItem="xdc-VT-xh4" firstAttribute="bottom" secondItem="B2T-nM-4EF" secondAttribute="bottom" constant="159" id="gab-IK-etC"/>
-                            <constraint firstItem="Z6c-M3-nn6" firstAttribute="centerX" secondItem="XBe-KW-Qwh" secondAttribute="centerX" id="ilw-bw-WlI"/>
+                            <constraint firstItem="Z6c-M3-nn6" firstAttribute="centerX" secondItem="XBe-KW-Qwh" secondAttribute="centerX" id="ilw-bw-WlI" userLabel="Logo.centerX = centerX"/>
                             <constraint firstItem="XBe-KW-Qwh" firstAttribute="leading" secondItem="xdc-VT-xh4" secondAttribute="leading" constant="47" id="r6S-Ul-ggj"/>
-                            <constraint firstItem="B2T-nM-4EF" firstAttribute="top" secondItem="XBe-KW-Qwh" secondAttribute="bottom" constant="29" id="rZj-aQ-KU3"/>
                             <constraint firstItem="Z6c-M3-nn6" firstAttribute="top" secondItem="xdc-VT-xh4" secondAttribute="top" constant="75" id="v2u-VZ-CnP"/>
                             <constraint firstItem="xdc-VT-xh4" firstAttribute="trailing" secondItem="Z6c-M3-nn6" secondAttribute="trailing" constant="30" id="wQp-7b-3qn"/>
                         </constraints>
