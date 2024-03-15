@@ -16,8 +16,8 @@ class ParkingViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var databaseReference: DatabaseReference!
     var timer: Timer?
-    var currentParkCode: Int = 0
-    var parkingCodes: [String] = []
+    var currentParkLot: String = ""
+    var parkingLots: [String] = []
     var spotStates: [String] = []
     var totalSpots: Int = 0
     var openSpots: Int = 0
@@ -29,10 +29,10 @@ class ParkingViewController: UIViewController, UITableViewDelegate, UITableViewD
         databaseReference = Database.database().reference()
         
         // Get park code from login to determine which lot data to access
-        parkingCodes = UserDefaults.standard.stringArray(forKey: "parkCodes") ?? ["-1"]
-        currentParkCode = Int(parkingCodes.first!) ?? -1
-        print("Recent parking codes: \(parkingCodes)")
-        print("Current code: \(currentParkCode)")
+        parkingLots = UserDefaults.standard.stringArray(forKey: "parkLots") ?? ["nil"]
+        currentParkLot = parkingLots.first!
+        print("Recent parking codes: \(parkingLots)")
+        print("Current code: \(currentParkLot)")
         
         // TODO: Change reading interval to when page is opened or user pulls for refresh or after a set time interval
         // Start a timer to read the value every second
@@ -48,24 +48,25 @@ class ParkingViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+        var content = cell.defaultContentConfiguration()
         
-        cell.textLabel?.text = "Parking Spot \(indexPath.row) is \(spotStates[indexPath.row])"
+        content.text = "Parking Spot \(indexPath.row) is \(spotStates[indexPath.row])"
+        cell.contentConfiguration = content
         
         return cell
     }
     
     @IBAction func searchAgain(_ sender: Any) {
-        
         Database.database().reference().removeAllObservers()
         timer?.invalidate()
         self.performSegue(withIdentifier: "searchAgain", sender: self)
     }
-
+    
     func readParkingSpotValue() {
         var parkState: String = ""
         
-        let lotReference = databaseReference.child("Parking_lot_\(currentParkCode)_test")
+        let lotReference = databaseReference.child(currentParkLot)
         
         // TODO: Wrap parking data as a TableView
         // Read data from "Parking_lot_{given park code}_test"
