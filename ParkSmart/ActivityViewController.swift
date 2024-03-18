@@ -32,7 +32,6 @@ class ActivityViewController: UIViewController, UITableViewDataSource, UITableVi
             lots = temp
         }
         
-        // Remove the code if it exists already
         if let index = lots.firstIndex(of: currentLot.text!) {
             return
         }
