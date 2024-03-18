@@ -12,8 +12,8 @@ import FirebaseDatabase
 
 class SearchViewController : UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
-    @IBOutlet weak var lotName: UITextField!
     @IBOutlet weak var autofillList: UITableView!
+    @IBOutlet weak var lotName: UITextField!
     
     var recentLots: [String] = []
     var allNames: [String] = []
@@ -51,11 +51,11 @@ class SearchViewController : UIViewController, UITableViewDelegate, UITableViewD
     
     @IBAction func onSearchButton(_ sender: Any) {
         print("Search Button Pressed")
-        guard let code = lotName.text else {
+        guard let name = lotName.text else {
             return
         }
         
-        getParkLot(code)
+        getParkLot(name)
         self.performSegue(withIdentifier: "login", sender: self)
     }
     
